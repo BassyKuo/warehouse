@@ -1,0 +1,15 @@
+<!--Header-->
+<ng-template pTemplate="content" [ngIf]="true">
+    <div class="content-top-left" style="top:145px;">
+        <div class="p-field p-grid" style="padding-bottom:10px;">
+            <p-button label="Add Layer" *ngIf="true" icon="pi pi-plus"></p-button>
+        </div>
+        <div class="p-field p-grid" style="padding-bottom:10px;">
+            <p-button label="Add Device" *ngIf="true" icon="pi pi-plus"></p-button>
+        </div>
+    </div>
+</ng-template>
+
+<!--Tooltip-->
+<tr [ngClass]="{'red-background': checkChangedType(defunit) }"  [pTooltip]="typeDescMapping[defunit.type] || '[ERROR] illegal catalog'" tooltipPosition="left">
+
